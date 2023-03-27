@@ -1,0 +1,738 @@
+/* Contrer user agent */
+a:-webkit-any-link {
+    color: unset;
+    cursor: pointer;
+    text-decoration: none;
+}
+li {
+    text-align: none;
+}
+ul {
+    list-style-type: none;
+}
+/*---------------------------------------------------------------------------*/
+
+.body {
+    background-color: #141414;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+/*---------------------------------------------------------------------------*/
+
+.nav {
+    color: white;
+    background-color: #141414;
+    
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: x-large;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    margin-bottom: 10px;
+    display: inline-block;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: stretch;
+}
+
+
+.nav-lien {
+    align-self: center;
+    display: inline-block;
+    padding: 8px 10px;
+    margin-right: 5px;
+}
+
+.nav-lien:hover {
+    text-decoration:none;
+    color: #808080;
+}
+
+.nav-lien.actuel {
+    font-weight: bolder;
+}
+
+.navRight{
+    margin-right: 35px;
+}
+
+sup {
+    font-size: 14px;
+    vertical-align: super;
+    border-radius: 100%;
+    background-color: #c31019;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+#searchIcon{
+    font-size: 20px;
+}
+
+/*---------------------------------------------------------------------------*/
+/* Page Accueil/Catégorie */
+.filmGlobal{
+    margin: 60px;
+    color: white;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
+}
+
+.filmSolo{
+    width: 250px ;
+    height: 500px;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.filmTitre{
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+    width: 200px;
+    height:70px ;
+}
+.imageFilm{
+    width:200px;
+    height: 309px;
+}
+
+.boutonAddPanier{
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boutonAddPanier:hover {
+    background-color: #b2070f;
+}
+
+/* Animation Image  */
+.filmSolo img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.filmSolo :hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+
+/*---------------------------------------------------------------------------*/
+/* Page Informations / Real*/
+.parentInfoFilm{
+    margin: 80px;
+    color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+
+}
+.parentInfoFilmGauche{
+    width: 200px;
+    height: 500px;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.parentInfoFilmDroite{
+    padding-left: 35px;
+    width: 500px;
+    height: 500px;
+
+}
+.filmInfoImage{
+    grid-area: 1 / 1 / 5 / 2;
+    width:200px;
+    height: 309px;
+}
+
+.filmInfoBandeAnnonce{
+    grid-area: 5 / 1 / 6 / 2; 
+    width: 130px;
+    text-align: center;
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+.filmInfoBandeAnnonce:hover {
+    background-color: #b2070f;
+}
+.filmInfoTitre{
+    text-align: center;
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    width: 500px;
+    height:100px ;
+}
+.filmInfoDate{
+    grid-area: 2 / 2 / 3 / 3;
+    width: 230px;
+    height:20px ;
+    
+}
+.filmInfoCategorie{
+    grid-area: 4 / 2 / 5 / 3;
+    width: 200px;
+    height:20px ;
+
+}
+
+.filmRealisateur{
+    grid-area: 4 / 2 / 5 / 3;
+    width: 400px;
+    height:20px ;
+    text-decoration: underline;
+}
+
+.filmRealisateur:hover{
+    color: #6e6b6b;
+}
+.filmInfoSynopsis{
+    grid-area: 4 / 2 / 5 / 3;
+
+}
+
+.boutonAddPanierInfo{
+    grid-area: 5 / 2 / 6 / 3;
+    margin-left: 290px;
+    margin-top: 10px;
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boutonAddPanierInfo:hover {
+    background-color: #b2070f;
+}
+.filmBoutonRealisateur{
+    text-decoration: underline;
+}
+
+.filmBoutonRealisateur:hover{
+    color: #6e6b6b;
+}
+
+/*---------------------------------------------------------------------------*/
+
+/* Page Recherche */
+
+.recherchePlace{
+    margin-top: 100px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	align-content: stretch;
+}
+.rechercheFilm h3{
+    color: white;
+
+}
+
+.rechercheReal h3{
+    color: white;
+}
+.imageRealisateur{
+    width:200px;
+    height: 266px;
+    
+}
+input[type="textRecherche"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+#searchButton{
+    margin-top: 20px;
+    width: 320px;
+}
+.filmGlobalRecherche{
+    margin: 60px;
+    color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: baseline;
+	align-content: space-around;
+}
+
+input[type="textRecherche"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    box-shadow: 2px 2px 5px rgb(76, 76, 76);
+}
+
+/*---------------------------------------------------------------------------*/
+
+/* Page Panier */
+
+.tablePanier{
+    margin-top: 90px;
+    margin-left: 100px ;
+    color: white;
+}
+.totalLeft{
+    margin-top: 30px;
+    margin-left: 30px ;
+    color: white;
+}
+.panierTitre{
+    width: 400px;
+    margin-left: 30px ;
+    /* background-color: #e50914; */
+}
+
+.panierFilmTitre{
+    text-align: center;
+    margin-top: 90px;
+}
+
+.panierPaiement{
+    margin-top: 20px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: space-around;
+}
+
+.panierLeft{
+    margin-right: 30px;
+}
+
+.paiement {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+}
+@keyframes bounce {
+    0% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-10px);
+    }
+    100% {
+    transform: translateY(0);
+    }
+}
+
+#check {
+    font-size: 200px;
+    animation: bounce 1s;
+    position: relative;
+    top: -5px;
+    animation-delay: calc(0.1s * var(--bounce-order));
+}
+
+/*---------------------------------------------------------------------------*/
+
+/* Page Profil */
+.profile{
+    margin-top: 70px;
+    text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+.profileIcone{
+    text-align: center;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    height: 100px;
+    width: 100px;
+}
+.profile h1 {
+    text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    color: white;
+    height: 50px;
+}
+.profilCase{
+    width: 100%;
+    color: white;
+    height: 200px;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+}
+.warningItem{
+    color: white;
+}
+/*---------------------------------------------------------------------------*/
+/* Page LogIn */
+.loginForm {
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+
+.loginForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formAlign{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 700px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 700px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #e50914;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    /* transition: background-color 0.2s ease-in-out; */
+}
+
+button[type="submit"]:hover {
+    background-color: #b2070f;
+}
+
+.creatAccount {
+    margin-top: 10px;
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.creatAccount:hover {
+    background-color: #b2070f;
+}
+
+/*---------------------------------------------------------------------------*/
+.footer {
+    margin-top: auto;
+    background-color: #141414;
+    color: #808080;
+    font-size: small;
+    line-height: double;
+    height: 300px;
+    width: 100%;
+    margin-left: -10px;
+    margin-bottom: -45px;
+    padding-left: 10px;
+    Position: absolute;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.footerCase{
+    height: 70px;
+}
+/*---------------------------------------------------------------------------*/
+@media only screen and (max-width: 848px) {
+    .nav {
+        height: 85px;}
+    .footerCaseLogo{
+        display: none;
+    }
+
+@media only screen and (max-width: 768px) {
+    .parentInfoFilm {
+    flex-direction: column;
+    align-items: center;
+    }
+    .infoFilm {
+    width: 100%;
+    }
+    .infoFilm .titreFilm {
+    margin-bottom: 10px;
+    text-align: center;
+    }
+    .infoFilm .descriptionFilm {
+    text-align: justify;
+    }
+    .infoFilm .boutons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    }
+    .infoFilm .boutons .btn:first-child {
+    margin-right: 10px;
+    }
+    /* Page Profil */
+.profile {
+    margin-top: 200pxb;
+    }
+    .profileIcone {
+        height: 90px;
+        width: 90px;
+    }
+    
+    .profile h1 {
+        height: 40px;
+    }
+    
+    .profilCase {
+        height: 175px;
+    }
+    
+    /* Page LogIn */
+    .loginForm {
+        margin-top: 150px;
+        margin-bottom: 250px;
+    }
+    
+    input[type="text"], 
+    input[type="password"], 
+    button[type="submit"], 
+    .creatAccount {
+        width: 80%;
+    }
+    
+    button[type="submit"] {
+        font-size: 16px;
+    }
+    
+    label {
+        font-size: 16px;
+    }
+    }
+    }
+    
+    @media only screen and (max-width: 576px) {
+    .infoFilm .titreFilm {
+    font-size: 20px;
+    }
+    .recherchePlace{
+        margin-top: 200px;
+    }
+    .infoFilm .descriptionFilm {
+    font-size: 14px;
+    }
+    .infoFilm .boutons {
+    flex-direction: column;
+    align-items: center;
+    }
+    .infoFilm .boutons .btn:first-child {
+    margin-right: 0;
+    margin-bottom: 10px;
+    }
+    .nav {
+        color: white;
+        background-color: #141414;;
+        width: 100%;
+        height: 70px;
+        text-align: center;
+        font-size: small;
+        position:fixed;
+        top:0;
+        z-index:1000;
+        margin-bottom: 10px;
+        display: inline-block;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+    }
+    .nav-lien {
+        align-self: center;
+        display: inline-block;
+        padding: 8px 5px;
+        margin-right: 5px;
+    }
+        /*Footer*/
+    .footer {
+        font-size: x-small;
+        margin-left: -40px;
+    }
+    .footerCase{
+        width: 20px;
+        margin-left: 10px;
+    }
+    }
+    
+
+    @media only screen and (max-width: 390px) {
+        .parentInfoFilm {
+        flex-direction: column;
+        align-items: center;
+        }
+        .infoFilm {
+        width: 100%;
+        }
+        .infoFilm .titreFilm {
+        margin-bottom: 10px;
+        text-align: center;
+        }
+        .infoFilm .descriptionFilm {
+        text-align: justify;
+        }
+        .infoFilm .boutons {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+        .infoFilm .boutons .btn:first-child {
+        margin-right: 0;
+        margin-bottom: 10px;
+        }
+        .nav {
+        height: 70px;
+        font-size: small;
+        }
+        .nav-lien {
+        padding: 8px 3px;
+        }
+        .footer {
+        font-size: xx-small;
+        margin-left: -20px;
+        }
+        .footerCase {
+        width: 10px;
+        margin-left: 5px;
+        }
+        .parentInfoFilm {
+            flex-direction: column;
+            width: 100%;
+            margin: 40px 10px;
+        }
+        
+        .parentInfoFilmGauche {
+            margin-top: 50px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .parentInfoFilmDroite {
+            margin-top: 50px;
+            padding-left: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .filmInfoImage {
+            height: auto;
+        }
+        
+        .filmInfoTitre {
+            font-size: large;
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        
+        .filmInfoDate, .filmInfoCategorie, .filmRealisateur {
+            height: auto;
+            width: 100%;
+            margin-top: 10px;
+            font-size: small;
+        }
+        
+        .boutonAddPanierInfo {
+            margin-right: 0;
+            margin-top: 20px;
+            font-size: small;
+        }
+        }
